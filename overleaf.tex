@@ -4,18 +4,11 @@
 \usepackage{hyperref}
 \usepackage{url}
 
-% \renewcommand\UrlFont{\color{blue}\rmfamily}
-
 \begin{document}
 
 \title{Forecasting Stock Market Trends Using Machine Learning}
 
-\author{Evan T. Dobler\thanks{GitHub Project: \section*{Public Repositories}
-\begin{itemize}
-    \item \textbf{GitHub:} \url{https://github.com/evandobler98/stock_market_capstone}
-    \item \textbf{Overleaf:} \url{https://www.overleaf.com/read/qpmmxndcknyt}
-\end{itemize}
-
+\author{Evan T. Dobler}
 
 \authorrunning{E. Dobler}
 
@@ -35,10 +28,13 @@ The financial markets are a cornerstone of the global economy, affecting investm
 
 In this project, we focus on using machine learning models to forecast stock movements based on historical market data. The problem is compelling due to the potential for automation, algorithmic trading, and portfolio optimization. However, the market is notoriously volatile, making prediction a challenging task. 
 
-We sourced our data from Yahoo Finance using the Python `yfinance` API. Our dataset includes open, close, high, low, volume, and derived indicators such as moving averages. Here is the data source link:
+We sourced our data from Yahoo Finance using the Python `yfinance` API, which pulls from publicly available sources such as Yahoo Finance \cite{yahoo-finance} and MarketWatch \cite{marketwatch}.
+
+Our dataset includes open, close, high, low, volume, and derived indicators such as moving averages.
 
 \begin{itemize}
-    \item Yahoo Finance: \url{https://finance.yahoo.com/markets/}
+    \item Yahoo Finance: \url{https://finance.yahoo.com/markets/stocks/most-active/}
+    \item MarketWatch: \url{https://www.marketwatch.com/investing?mod=top_nav}
 \end{itemize}
 
 Our workflow includes:
@@ -104,28 +100,19 @@ This study demonstrates the feasibility of applying machine learning to stock pr
 \section*{Public Repositories}
 \begin{itemize}
     \item \textbf{GitHub:} \url{https://github.com/evandobler98/stock_market_capstone}
-    \item \textbf{Overleaf:} \url{https://www.overleaf.com/read/your-public-link-here}
+    \item \textbf{Overleaf:} \url{https://www.overleaf.com/read/qpmmxndcknyt}
 \end{itemize}
 
-\bibliographystyle{splncs04}
-\bibliography{mybibliography}
+\begin{thebibliography}{2}
 
-% Example citations:
-% \cite{bariah2020prospective}, \cite{kato2020ten}
+\bibitem{yahoo-finance}
+Yahoo Finance: Most Active Stocks Today.\\
+\url{https://finance.yahoo.com/markets/stocks/most-active/}. Accessed 3 July 2025
 
-% Sample BibTeX entries:
-% @article{bariah2020prospective,
-%   title={A prospective analysis of stock market prediction using ML},
-%   author={Bariah, L. and Ali, A.},
-%   journal={Journal of Financial Innovation},
-%   year={2020}
-% }
+\bibitem{marketwatch}
+MarketWatch: Stock Market Quotes, Business News, and Financial News.\\
+\url{https://www.marketwatch.com/investing?mod=top_nav}. Accessed 3 July 2025
 
-% @article{kato2020ten,
-%   title={Ten years of AI in finance: A review},
-%   author={Kato, S. and Lee, H.},
-%   journal={Journal of Quantitative Finance},
-%   year={2020}
-% }
+\end{thebibliography}
 
 \end{document}
