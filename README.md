@@ -1,131 +1,65 @@
-\documentclass[runningheads]{llncs}
+# 📈 Forecasting Stock Market Trends Using Machine Learning
 
-\usepackage{graphicx}
-\usepackage{hyperref}
-\usepackage{url}
+This project applies machine learning to historical stock market data to forecast short-term stock price trends. Using regression models such as Linear Regression, Random Forest, and XGBoost, we evaluate predictive accuracy and analyze financial indicators over time.
 
-% \renewcommand\UrlFont{\color{blue}\rmfamily}
+---
 
-\begin{document}
+## 📄 Project Overview
 
-\title{Forecasting Stock Market Trends Using Machine Learning}
+Financial markets are volatile and complex, but machine learning offers tools to detect patterns and support data-driven decisions. In this capstone project, we explore a complete data science pipeline from collection and preparation to modeling and evaluation.
 
-\author{Evan T. Dobler\thanks{GitHub Project: \section*{Public Repositories}
-\begin{itemize}
-    \item \textbf{GitHub:} \url{https://github.com/evandobler98/stock_market_capstone}
-    \item \textbf{Overleaf:} \url{https://www.overleaf.com/read/qpmmxndcknyt}
-\end{itemize}
+---
 
+## 🔍 Features
 
-\authorrunning{E. Dobler}
+- Historical stock data pulled from Yahoo Finance
+- Feature engineering with moving averages, RSI, and volume spikes
+- Exploratory data visualization (pairplots, trend plots)
+- Machine learning models:
+  - Linear Regression  
+  - Random Forest Regressor  
+  - XGBoost Regressor
+- Evaluation using MAE, RMSE, and R²
+- Future ideas: NLP-based indicators, LSTM forecasting, and web dashboards
 
-\institute{Northwest Missouri State University, Maryville MO 64468, USA \\
-\email{S576852@nwmissouri.edu, dobler.evan.t.2016@gmail.com} \\
-\url{https://github.com/evandobler98/stock_market_capstone}}
+---
 
-\maketitle
+## 🧪 Tech Stack
 
-\begin{abstract}
-This project explores the application of machine learning to predict short-term stock market movements. Using historical price and volume data from major public companies, we build predictive models using regression techniques. We apply data cleaning, visualization, feature engineering, and model evaluation in a full data science pipeline. The study includes insights about model performance and limitations of stock trend prediction.
-\keywords{stock market \and data analytics \and trends \and machine learning}
-\end{abstract}
+- Python  
+- `yfinance`  
+- `pandas`, `numpy`, `matplotlib`, `seaborn`  
+- `scikit-learn`, `xgboost`  
+- LaTeX (LLNCS Template)
 
-\section{Introduction}
-The financial markets are a cornerstone of the global economy, affecting investments, retirement funds, and corporate growth. Accurate prediction of stock price trends could benefit individual investors, analysts, and financial institutions. 
+---
 
-In this project, we focus on using machine learning models to forecast stock movements based on historical market data. The problem is compelling due to the potential for automation, algorithmic trading, and portfolio optimization. However, the market is notoriously volatile, making prediction a challenging task. 
+## 📚 Documentation
 
-We sourced our data from Yahoo Finance using the Python `yfinance` API. Our dataset includes open, close, high, low, volume, and derived indicators such as moving averages. Here is the data source link:
+- **Overleaf Report (PDF)**  
+  [📘 View Full LaTeX Report on Overleaf](https://www.overleaf.com/read/qpmmxndcknyt)
 
-\begin{itemize}
-    \item Yahoo Finance: \url{https://finance.yahoo.com/markets/}
-\end{itemize}
+- **Source Code & Report Files**  
+  [💻 GitHub Repository](https://github.com/evandobler98/stock_market_capstone)
 
-Our workflow includes:
-\begin{enumerate}
-    \item Collecting stock data via the Yahoo Finance API.
-    \item Cleaning and preparing time series data.
-    \item Creating technical indicators like RSI and moving averages.
-    \item Modeling with algorithms like Linear Regression, Random Forest, and XGBoost.
-    \item Evaluating and comparing model results.
-\end{enumerate}
+---
 
-\section{Domain and Problem Definition}
-This project is situated in the domain of quantitative finance. The problem we address is how to predict the next-day closing price of a stock based on the past 60 days of historical data. This is important for retail investors and analysts aiming to improve decision-making through data.
+## 📈 Data Sources
 
-\section{Data Collection and Description}
-We collected stock data using the `yfinance` library in Python. The stocks selected include AAPL, AMZN, MSFT, and TSLA. The data includes daily OHLCV values and spans from 2015 to 2024.
+- [Yahoo Finance – Most Active Stocks](https://finance.yahoo.com/markets/stocks/most-active/)
+- [MarketWatch – Investing Portal](https://www.marketwatch.com/investing?mod=top_nav)
 
-\section{Data Cleaning and Feature Engineering}
-Missing data was handled using forward fill. We generated new features such as:
-\begin{itemize}
-    \item 14-day and 30-day moving averages
-    \item Relative Strength Index (RSI)
-    \item Volume spikes
-\end{itemize}
+---
 
-\section{Exploratory Data Analysis}
-We analyzed price volatility and trend behavior using plots. Correlation matrices and pairplots were used to assess relationships.
+## 📌 Author
 
-\section{Modeling and Evaluation}
-We used three models:
-\begin{itemize}
-    \item Linear Regression – as a baseline
-    \item Random Forest Regressor
-    \item XGBoost Regressor
-\end{itemize}
-Evaluation metrics include MAE, RMSE, and $R^2$. XGBoost gave the most accurate predictions with an RMSE of \$1.45 for AAPL.
+**Evan T. Dobler**  
+Northwest Missouri State University  
+Email: `S576852@nwmissouri.edu`  
+Alt: `dobler.evan.t.2016@gmail.com`
 
-\section{Insights and Results}
-\begin{itemize}
-    \item Volume and momentum indicators were most predictive.
-    \item Linear models underfit the data.
-    \item Ensemble models captured trends and outliers better.
-\end{itemize}
+---
 
-\section{Limitations}
-\begin{itemize}
-    \item No real-time or intraday data.
-    \item External factors like news events and earnings are not modeled.
-    \item Model performance can degrade in highly volatile markets.
-\end{itemize}
+## 📝 License
 
-\section{Future Work}
-Future work includes:
-\begin{itemize}
-    \item Incorporating natural language processing from financial news headlines.
-    \item Implementing LSTM-based time series models.
-    \item Building a Flask-based dashboard for real-time monitoring.
-\end{itemize}
-
-\section{Conclusion}
-This study demonstrates the feasibility of applying machine learning to stock price prediction. While models show promise, financial markets remain highly unpredictable. A multi-factor approach with external signals will likely improve accuracy.
-
-\section*{Public Repositories}
-\begin{itemize}
-    \item \textbf{GitHub:} \url{https://github.com/evandobler98/stock_market_capstone}
-    \item \textbf{Overleaf:} \url{https://www.overleaf.com/read/your-public-link-here}
-\end{itemize}
-
-\bibliographystyle{splncs04}
-\bibliography{mybibliography}
-
-% Example citations:
-% \cite{bariah2020prospective}, \cite{kato2020ten}
-
-% Sample BibTeX entries:
-% @article{bariah2020prospective,
-%   title={A prospective analysis of stock market prediction using ML},
-%   author={Bariah, L. and Ali, A.},
-%   journal={Journal of Financial Innovation},
-%   year={2020}
-% }
-
-% @article{kato2020ten,
-%   title={Ten years of AI in finance: A review},
-%   author={Kato, S. and Lee, H.},
-%   journal={Journal of Quantitative Finance},
-%   year={2020}
-% }
-
-\end{document}
+This project is for academic use. You may reuse or adapt with attribution.
