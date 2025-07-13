@@ -28,18 +28,16 @@ The financial markets are a cornerstone of the global economy, affecting investm
 
 In this project, we focus on using machine learning models to forecast stock movements based on historical market data. The problem is compelling due to the potential for automation, algorithmic trading, and portfolio optimization. However, the market is notoriously volatile, making prediction a challenging task. 
 
-We sourced our data from Yahoo Finance using the Python `yfinance` API, which pulls from publicly available sources such as Yahoo Finance \cite{yahoo-finance} and MarketWatch \cite{marketwatch}.
-
-Our dataset includes open, close, high, low, volume, and derived indicators such as moving averages.
+We sourced our data using the Python `yfinance` API, which pulls data from publicly available financial sites such as Nasdaq \cite{nasdaq} and MarketWatch \cite{marketwatch}. Our dataset includes open, close, high, low, volume, and derived indicators such as moving averages.
 
 \begin{itemize}
-    \item Yahoo Finance: \url{https://finance.yahoo.com/markets/stocks/most-active/}
+    \item Nasdaq: \url{https://www.nasdaq.com/}
     \item MarketWatch: \url{https://www.marketwatch.com/investing?mod=top_nav}
 \end{itemize}
 
 Our workflow includes:
 \begin{enumerate}
-    \item Collecting stock data via the Yahoo Finance API.
+    \item Collecting stock data via the `yfinance` API.
     \item Cleaning and preparing time series data.
     \item Creating technical indicators like RSI and moving averages.
     \item Modeling with algorithms like Linear Regression, Random Forest, and XGBoost.
@@ -105,9 +103,9 @@ This study demonstrates the feasibility of applying machine learning to stock pr
 
 \begin{thebibliography}{2}
 
-\bibitem{yahoo-finance}
-Yahoo Finance: Most Active Stocks Today.\\
-\url{https://finance.yahoo.com/markets/stocks/most-active/}. Accessed 3 July 2025
+\bibitem{nasdaq}
+Nasdaq: Stock Market Data and Financial News.\\
+\url{https://www.nasdaq.com/}. Accessed 3 July 2025
 
 \bibitem{marketwatch}
 MarketWatch: Stock Market Quotes, Business News, and Financial News.\\
