@@ -48,7 +48,55 @@ Our workflow includes:
 This project is situated in the domain of quantitative finance. The problem we address is how to predict the next-day closing price of a stock based on the past 60 days of historical data. This is important for retail investors and analysts aiming to improve decision-making through data.
 
 \section{Data Collection and Description}
-We collected stock data using the `yfinance` library in Python. The stocks selected include AAPL, AMZN, MSFT, and TSLA. The data includes daily OHLCV values and spans from 2015 to 2024.
+
+\subsection{Data Source}
+Our stock market data was gathered from publicly available listings on \textbf{Nasdaq.com}, using the Python library \texttt{yfinance}, which retrieves historical financial data from Yahoo Finance's API. Data was collected for the following four companies:
+\begin{itemize}
+    \item \textbf{Tesla (TSLA):} \url{https://www.nasdaq.com/market-activity/stocks/tsla/historical?page=1&rows_per_page=10&timeline=y10}
+    \item \textbf{Amazon (AMZN):} \url{https://www.nasdaq.com/market-activity/stocks/amzn/historical?page=1&rows_per_page=10&timeline=y10}
+    \item \textbf{Microsoft (MSFT):} \url{https://www.nasdaq.com/market-activity/stocks/msft/historical}
+    \item \textbf{Apple (AAPL):} \url{https://www.nasdaq.com/market-activity/stocks/aapl/historical?page=1&rows_per_page=10&timeline=y10}
+\end{itemize}
+The time span for the dataset is from \textbf{January 1, 2015 to December 31, 2024}, covering a 10-year period. The data originates from major U.S. stock exchanges, primarily NASDAQ and NYSE.
+
+\subsection{Data Size and Format}
+The master dataset was consolidated into a single CSV file combining individual company data. The merged file contains:
+\begin{itemize}
+    \item \textbf{Format:} CSV (comma-separated values)
+    \item \textbf{File size:} Approximately 568 KB
+    \item \textbf{Total rows:} 10,061
+    \item \textbf{Total columns:} 7
+\end{itemize}
+
+\subsection{Data Attributes and Dictionary}
+The final dataset contains the following attributes, which are consistent across all companies:
+\begin{itemize}
+    \item \textbf{Stock:} Ticker symbol (e.g., TSLA, AAPL)
+    \item \textbf{Date:} The trading date (markets are closed on weekends and holidays)
+    \item \textbf{Open:} Opening price on the trading day
+    \item \textbf{High:} Highest trading price of the day
+    \item \textbf{Low:} Lowest trading price of the day
+    \item \textbf{Close/Last:} Final price at market close
+    \item \textbf{Volume:} Total number of shares traded that day
+\end{itemize}
+
+\subsection{Data Ingestion and Extraction Method}
+We used the \texttt{yfinance} Python package to extract historical market data for each company. This library simplifies access to Yahoo Finance's historical OHLCV data (Open, High, Low, Close, Volume) via API calls. After retrieval, data was exported as `.csv` files for each company and combined into a single master dataset using `pandas`.
+
+\subsection{Cleaning and Preprocessing}
+The data was mostly clean on retrieval. The following preparation steps were taken:
+\begin{itemize}
+    \item Verified date ranges for each company
+    \item Checked for missing values — none were present
+    \item Standardized column names and formatting
+    \item Combined all datasets into one file with an added \texttt{Stock} column
+\end{itemize}
+
+\subsection{Access to Data}
+The complete cleaned dataset is available in our public GitHub repository:
+\begin{itemize}
+    \item \textbf{GitHub CSV Link:} \url{https://github.com/evandobler98/stock_market_capstone/blob/main/Stock%20Price%20Data.csv}
+\end{itemize}
 
 \section{Data Cleaning and Feature Engineering}
 Missing data was handled using forward fill. We generated new features such as:
@@ -101,7 +149,7 @@ This study demonstrates the feasibility of applying machine learning to stock pr
     \item \textbf{Overleaf:} \url{https://www.overleaf.com/read/qpmmxndcknyt}
 \end{itemize}
 
-\begin{thebibliography}{2}
+\begin{thebibliography}{6}
 
 \bibitem{nasdaq}
 Nasdaq: Stock Market Data and Financial News.\\
@@ -111,6 +159,23 @@ Nasdaq: Stock Market Data and Financial News.\\
 MarketWatch: Stock Market Quotes, Business News, and Financial News.\\
 \url{https://www.marketwatch.com/investing?mod=top_nav}. Accessed 3 July 2025
 
+\bibitem{tsla2025}
+Tesla Historical Stock Data.\\
+\url{https://www.nasdaq.com/market-activity/stocks/tsla/historical?page=1&rows_per_page=10&timeline=y10}. Accessed 3 July 2025
+
+\bibitem{amzn2025}
+Amazon Historical Stock Data.\\
+\url{https://www.nasdaq.com/market-activity/stocks/amzn/historical?page=1&rows_per_page=10&timeline=y10}. Accessed 3 July 2025
+
+\bibitem{msft2025}
+Microsoft Historical Stock Data.\\
+\url{https://www.nasdaq.com/market-activity/stocks/msft/historical}. Accessed 3 July 2025
+
+\bibitem{aapl2025}
+Apple Historical Stock Data.\\
+\url{https://www.nasdaq.com/market-activity/stocks/aapl/historical?page=1&rows_per_page=10&timeline=y10}. Accessed 3 July 2025
+
 \end{thebibliography}
+
 
 \end{document}
