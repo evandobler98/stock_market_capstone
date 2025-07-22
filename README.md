@@ -83,22 +83,25 @@ pip install -r requirements.txt
 ```
 If Prophet is missing, install it manually:
 
-bash
+```bash
 Copy code
 pip install prophet
-3️⃣ Run the Stock Forecast Script
+```
+
+### 3️⃣ Run the Stock Forecast Script
 To forecast all available stocks to 2030, run:
 
-bash
+```bash
 Copy code
 python forecast_stocks.py
+```
 This will:
 ✅ Load the dataset (Stock Price Data.xlsx)
 ✅ Forecast each stock’s future prices to 2030 using Prophet
 ✅ Generate and display forecast plots
 ✅ Save all forecasted results to stock_forecasts_to_2030.csv
 
-4️⃣ View Results
+### 4️⃣ View Results
 Plots → Forecasts for each stock (AAPL, TSLA, MSFT, AMZN)
 
 CSV Output → stock_forecasts_to_2030.csv contains predicted prices (yhat), plus lower/upper confidence intervals
