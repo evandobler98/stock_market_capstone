@@ -64,19 +64,23 @@ Follow these steps to set up your environment and run the project.
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
+```
+
 Windows:
 
-bash
+```bash
 Copy code
 python -m venv .venv
 .venv\Scripts\activate
+```
 ✅ Tip: You’ll see (.venv) before your terminal prompt once activated.
 
-2️⃣ Install Dependencies
-bash
+### 2️⃣ Install Dependencies
+```bash
 Copy code
 pip install --upgrade pip  
 pip install -r requirements.txt
+```
 If Prophet is missing, install it manually:
 
 bash
