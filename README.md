@@ -109,7 +109,7 @@ CSV Output → stock_forecasts_to_2030.csv contains predicted prices (yhat), plu
 📦 Example requirements.txt
 Save this as requirements.txt before running the installation step:
 
-text
+```text
 Copy code
 pandas
 numpy
@@ -119,6 +119,7 @@ scikit-learn
 xgboost
 prophet
 openpyxl   # for reading Excel files
+```
 
 📌 Author
 Evan T. Dobler
