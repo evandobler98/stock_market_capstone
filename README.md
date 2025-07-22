@@ -122,8 +122,8 @@ openpyxl   # for reading Excel files
 ```
 
 📌 Author
-Evan T. Dobler
-Northwest Missouri State University
-Email: S576852@nwmissouri.edu
-Alt: dobler.evan.t.2016@gmail.com
+#### Evan T. Dobler
+#### Northwest Missouri State University
+#### Email: S576852@nwmissouri.edu
+#### Alt: dobler.evan.t.2016@gmail.com
 
