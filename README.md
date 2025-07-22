@@ -1,6 +1,6 @@
 # 📈 Forecasting Stock Market Trends Using Machine Learning
 
-This project applies machine learning to historical stock market data to forecast short-term stock price trends. Using regression models such as Linear Regression, Random Forest, and XGBoost, we evaluate predictive accuracy and analyze financial indicators over time.
+This project applies machine learning to historical stock market data to forecast both **short-term trends** (using regression models) and **long-term trends** (using Facebook Prophet). We evaluate predictive accuracy, visualize historical movements, and generate **forecasts up to 2030**.
 
 ---
 
@@ -8,29 +8,32 @@ This project applies machine learning to historical stock market data to forecas
 
 Financial markets are volatile and complex, but machine learning offers tools to detect patterns and support data-driven decisions. In this capstone project, we explore a complete data science pipeline from collection and preparation to modeling and evaluation.
 
+Now extended with **long-term time-series forecasting using Prophet**, this project can project price trends years into the future.
+
 ---
 
 ## 🔍 Features
 
-- Historical stock data pulled from Yahoo Finance
-- Feature engineering with moving averages, RSI, and volume spikes
-- Exploratory data visualization (pairplots, trend plots)
+- Historical stock data pulled from Yahoo Finance  
+- Feature engineering with moving averages, RSI, and volume spikes  
+- Exploratory data visualization (pairplots, trend plots)  
 - Machine learning models:
   - Linear Regression  
   - Random Forest Regressor  
-  - XGBoost Regressor
-- Evaluation using MAE, RMSE, and R²
-- Future ideas: NLP-based indicators, LSTM forecasting, and web dashboards
+  - XGBoost Regressor  
+- **NEW:** Long-term forecasting using **Prophet** (projects stock prices to 2030)  
+- Evaluation using MAE, RMSE, and R²  
+- Future ideas: NLP-based indicators, LSTM forecasting, and web dashboards  
 
 ---
 
 ## 🧪 Tech Stack
 
 - Python  
-- `yfinance`  
-- `pandas`, `numpy`, `matplotlib`, `seaborn`  
+- `yfinance`, `pandas`, `numpy`, `matplotlib`, `seaborn`  
 - `scikit-learn`, `xgboost`  
-- LaTeX (LLNCS Template)
+- **Prophet (Facebook’s time-series library)**  
+- LaTeX (LLNCS Template)  
 
 ---
 
@@ -46,20 +49,73 @@ Financial markets are volatile and complex, but machine learning offers tools to
 
 ## 📈 Data Sources
 
-- [Yahoo Finance – Most Active Stocks](https://finance.yahoo.com/markets/stocks/most-active/)
+- [Yahoo Finance – Most Active Stocks](https://finance.yahoo.com/markets/stocks/most-active/)  
 - [MarketWatch – Investing Portal](https://www.marketwatch.com/investing?mod=top_nav)
 
 ---
 
-## 📌 Author
+## ⚙️ Setup & Installation  
 
-**Evan T. Dobler**  
-Northwest Missouri State University  
-Email: `S576852@nwmissouri.edu`  
-Alt: `dobler.evan.t.2016@gmail.com`
+Follow these steps to set up your environment and run the project.  
 
----
+### 1️⃣ Create a Virtual Environment (Recommended)
 
-## 📝 License
+**macOS/Linux:**  
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+Windows:
 
-This project is for academic use. You may reuse or adapt with attribution.
+bash
+Copy code
+python -m venv .venv
+.venv\Scripts\activate
+✅ Tip: You’ll see (.venv) before your terminal prompt once activated.
+
+2️⃣ Install Dependencies
+bash
+Copy code
+pip install --upgrade pip  
+pip install -r requirements.txt
+If Prophet is missing, install it manually:
+
+bash
+Copy code
+pip install prophet
+3️⃣ Run the Stock Forecast Script
+To forecast all available stocks to 2030, run:
+
+bash
+Copy code
+python forecast_stocks.py
+This will:
+✅ Load the dataset (Stock Price Data.xlsx)
+✅ Forecast each stock’s future prices to 2030 using Prophet
+✅ Generate and display forecast plots
+✅ Save all forecasted results to stock_forecasts_to_2030.csv
+
+4️⃣ View Results
+Plots → Forecasts for each stock (AAPL, TSLA, MSFT, AMZN)
+
+CSV Output → stock_forecasts_to_2030.csv contains predicted prices (yhat), plus lower/upper confidence intervals
+
+📦 Example requirements.txt
+Save this as requirements.txt before running the installation step:
+
+text
+Copy code
+pandas
+numpy
+matplotlib
+seaborn
+scikit-learn
+xgboost
+prophet
+openpyxl   # for reading Excel files
+
+📌 Author
+Evan T. Dobler
+Northwest Missouri State University
+Email: S576852@nwmissouri.edu
+Alt: dobler.evan.t.2016@gmail.com
+
