@@ -121,7 +121,7 @@ prophet
 openpyxl   # for reading Excel files
 ```
 
-📌 Author
+### 📌 Author
 #### Evan T. Dobler
 #### Northwest Missouri State University
 #### Email: S576852@nwmissouri.edu
