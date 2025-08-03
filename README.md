@@ -10,20 +10,23 @@ Financial markets are volatile and complex, but machine learning offers tools to
 
 Now extended with **long-term time-series forecasting using Prophet**, this project can project price trends years into the future.
 
+The work is documented in one notebook:
+- [`predictive_analysis.ipynb`](https://github.com/evandobler98/stock_market_capstone/blob/main/predictive_analysis.ipynb): Full pipeline (includes EDA + forecasting)
+
 ---
 
 ## 🔍 Features
 
-- Historical stock data pulled from Yahoo Finance  
-- Feature engineering with moving averages, RSI, and volume spikes  
-- Exploratory data visualization (pairplots, trend plots)  
+- Historical stock data pulled from **Nasdaq** and MarketWatch
+- Feature engineering with moving averages, RSI, and volume spikes
+- Exploratory data visualization (pairplots, heatmaps, trend plots)
 - Machine learning models:
   - Linear Regression  
   - Random Forest Regressor  
   - XGBoost Regressor  
 - **NEW:** Long-term forecasting using **Prophet** (projects stock prices to 2030)  
 - Evaluation using MAE, RMSE, and R²  
-- Future ideas: NLP-based indicators, LSTM forecasting, and web dashboards  
+- Future ideas: NLP-based indicators, LSTM forecasting, and interactive dashboards  
 
 ---
 
@@ -31,32 +34,34 @@ Now extended with **long-term time-series forecasting using Prophet**, this proj
 
 - Python  
 - `yfinance`, `pandas`, `numpy`, `matplotlib`, `seaborn`  
-- `scikit-learn`, `xgboost`  
-- **Prophet (Facebook’s time-series library)**  
-- LaTeX (LLNCS Template)  
+- `scikit-learn`, `xgboost`, `prophet`  
+- LaTeX (LLNCS Template)
 
 ---
 
 ## 📚 Documentation
 
-- **Overleaf Report (PDF)**  
-  [📘 View Full LaTeX Report on Overleaf](https://www.overleaf.com/read/qpmmxndcknyt)
+- **📘 Overleaf Report:**  
+  [View Full LaTeX Report on Overleaf](https://www.overleaf.com/read/qpmmxndcknyt)
 
-- **Source Code & Report Files**  
-  [💻 GitHub Repository](https://github.com/evandobler98/stock_market_capstone)
+- **💻 GitHub Repository:**  
+  [View Source Code](https://github.com/evandobler98/stock_market_capstone)
+
+- **📓 Notebook (Full Project):**  
+  [`predictive_analysis.ipynb`](https://github.com/evandobler98/stock_market_capstone/blob/main/predictive_analysis.ipynb)
 
 ---
 
 ## 📈 Data Sources
 
-- [Yahoo Finance – Most Active Stocks](https://finance.yahoo.com/markets/stocks/most-active/)  
+- [Nasdaq – Main Site](https://www.nasdaq.com/)  
 - [MarketWatch – Investing Portal](https://www.marketwatch.com/investing?mod=top_nav)
 
 ---
 
 ## ⚙️ Setup & Installation  
 
-Follow these steps to set up your environment and run the project.  
+Follow these steps to set up your environment and run the project:
 
 ### 1️⃣ Create a Virtual Environment (Recommended)
 
@@ -64,7 +69,7 @@ Follow these steps to set up your environment and run the project.
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
-```
+
 
 Windows:
 
